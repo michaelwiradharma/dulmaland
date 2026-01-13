@@ -1,4 +1,6 @@
 ---
+import BrandLogo from "../components/BrandLogo.astro";
+
 const bgUrl =
   "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=2000&q=80"; // optional decorative image
 ---
@@ -51,6 +53,9 @@ const bgUrl =
         margin: 0 auto 40px;
       }
       .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         font-weight: 700;
         letter-spacing: 1px;
       }
@@ -221,7 +226,10 @@ const bgUrl =
   <body>
     <div class="shell">
       <header class="nav">
-        <div class="brand">💎 DULMALAND</div>
+        <div class="brand">
+          <BrandLogo size={26} />
+          <span>DULMALAND</span>
+        </div>
         <div class="links">
           <a href="/">Home</a>
           <a href="/#services">Services</a>

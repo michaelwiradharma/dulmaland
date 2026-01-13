@@ -1,5 +1,5 @@
 ---
-// src/pages/index.astro
+import BrandLogo from "../components/BrandLogo.astro";
 ---
 
 <html lang="en">
@@ -330,20 +330,26 @@
   <body>
     <section class="hero">
       <header class="nav">
-        <div class="brand">💎 DULMALAND</div>
+        <div class="brand">
+          <BrandLogo size={26} />
+          <span>DULMALAND</span>
+        </div>
         <div class="links">
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#destinations">Destinations</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <a class="cta-small" href="#contact">Get Started</a>
+          <a href="#services">About</a>
+          <a href="/contact">Contact</a>
+          <a class="cta-small" href="/contact">Get Started</a>
         </div>
       </header>
 
       <div class="hero-body">
         <div class="hero-inner">
-          <div class="pill">💎 Global Investment Advisory</div>
+          <div class="pill">
+            <BrandLogo size={18} />
+            Global Investment Advisory
+          </div>
           <h1>
             Invest Globally.<br />
             <span class="accent">Live Exceptionally.</span>
