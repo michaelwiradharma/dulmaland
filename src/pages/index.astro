@@ -1,7 +1,5 @@
 ---
 // src/pages/index.astro
-const bgUrl =
-  "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=2000&q=80";
 ---
 
 <html lang="en">
@@ -9,7 +7,7 @@ const bgUrl =
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Dulmaland | Global Investment Advisory</title>
-	<link rel="icon" type="image/jpeg" href="/dulmaland-logo.jpeg" />
+    <link rel="icon" type="image/jpeg" href="/dulmaland-logo.jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,6 +27,9 @@ const bgUrl =
       * {
         box-sizing: border-box;
       }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         margin: 0;
         font-family:
@@ -47,7 +48,7 @@ const bgUrl =
         color: var(--text);
         background:
           linear-gradient(var(--navy-80), var(--navy-80)),
-          url(${bgUrl}) center/cover no-repeat;
+          url("/backdrop.jpg") center/cover no-repeat;
       }
       .nav {
         display: flex;
@@ -200,12 +201,12 @@ const bgUrl =
         background: rgba(15, 35, 57, 0.6);
         backdrop-filter: blur(6px);
         transition:
-          transform 0.2s ease,
+          transform 0.25s ease-out,
           background 0.2s ease,
           opacity 0.2s ease;
       }
       .hero-chevron:hover {
-        transform: translate(-50%, -3px);
+        transform: translate(-50%, -6px) scale(1.12);
         background: rgba(15, 35, 57, 0.9);
         opacity: 0.95;
       }
@@ -376,9 +377,22 @@ const bgUrl =
           </div>
         </div>
       </div>
-      <a href="#services" class="hero-chevron" aria-label="Scroll to next section">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 9l6 6 6-6"/>
+      <a
+        href="#services"
+        class="hero-chevron"
+        aria-label="Scroll to next section"
+      >
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M6 9l6 6 6-6"></path>
         </svg>
       </a>
     </section>
